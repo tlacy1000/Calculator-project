@@ -85,7 +85,6 @@ $(document).ready(function() {
 //PHASE 2
 //create a few test on click events
 //These could just trigger alert messages
-
 //What variables will I need?
   var firstNumber
   var secondNumber
@@ -98,16 +97,18 @@ $(".number").on("click", function() {
   let firstNumber= $("#first-number");
 });
 
-$(".number").on("click", function() {
-  console.log ("btn secondary number .click() called.");
-  let firstNumber= $("#secondary-number");
-});
 
+///This shows the value of the button the user clicks
+$(document).ready(function() { 
+     $('button').on('click', function(e) {    
+           console.log('e', e.target.innerHTML);    });
+  }
+ );
 
 //storing them in global variables
 let num1 = '';let num2 = '';let operator = '';let total = '';
 
-// Your code here...
+
 
 
 });
