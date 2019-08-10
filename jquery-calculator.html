@@ -74,6 +74,36 @@
 
 $(document).ready(function() {
 
+
+//PHASE 1
+//How will you capture button clicks? Onclick events
+//What will you do with numbers clicked? document element of Id then perform math on whatever the number is
+//What will you do when the operator is clicked? Establish that you need to enter a new number that is the operator selected
+//How will you differentiate numbers from operators? 
+//How will you know the "value" of a number clicked?
+
+//PHASE 2
+//create a few test on click events
+//These could just trigger alert messages
+
+//What variables will I need?
+  var firstNumber
+  var secondNumber
+  var operator
+  var result
+
+
+$(".number").on("click", function() {
+  console.log ("btn primary number .click() called.");
+  let firstNumber= $("#first-number");
+});
+
+$(".number").on("click", function() {
+  console.log ("btn secondary number .click() called.");
+  let firstNumber= $("#secondary-number");
+});
+
+
 // Your code here...
 
 
