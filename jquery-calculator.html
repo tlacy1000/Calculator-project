@@ -86,27 +86,49 @@ $(document).ready(function() {
 //create a few test on click events
 //These could just trigger alert messages
 //What variables will I need?
-  var firstNumber
-  var secondNumber
-  var operator
-  var result
+  let firstNumber = " ";
+  let secondNumber = " ";
+  let operator;
+  var result;
+  var operatorClick = false;
+
+  //reference Varivales
+  let firstNumberText= $("#first-number");
+  let secondNumberText= $("#second-number");
+  let operatorText = $('#operator');
 
 
-$(".number").on("click", function() {
-  console.log ("btn primary number .click() called.");
-  let firstNumber= $("#first-number");
-});
+
 
 
 ///This shows the value of the button the user clicks
-$(document).ready(function() { 
-     $('button').on('click', function(e) {    
-           console.log('e', e.target.innerHTML);    });
-  }
- );
+
+  $('.number').on('click', function(event) {
+    $(this);
+    if(!operatorClick){
+    firstNumber += ((this).value);
+    console.log (firstNumber);
+    firstNumberText.text(firstNumber);
+    } else {
+      secondNumber += ((this).value);
+      console.log (secondNumber);
+      secondNumberText.text(secondNumber);
+    }
+    
+  });
+
+  //operator
+  $('.operator').on('click', function(event) {
+    $(this)
+    operatorClick = true;
+    operatorText.text((this).value);
+
+  });
+
+  
 
 //storing them in global variables
-let num1 = '';let num2 = '';let operator = '';let total = '';
+// let num1 = '';let num2 = '';let operator = '';let total = '';
 
 
 
